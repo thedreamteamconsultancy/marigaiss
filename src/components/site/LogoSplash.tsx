@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/mipl-logo.png.asset.json";
+import logoAsset from "@/assets/logo.png";
 
 /**
  * Premium logo loading splash — shows on first paint, then fades out.
@@ -54,7 +54,7 @@ export function LogoSplash() {
           {/* Logo plate */}
           <div className="absolute inset-6 flex items-center justify-center rounded-full bg-white shadow-[0_30px_80px_-20px_rgba(225,29,42,0.55)]">
             <img
-              src={logoAsset.url}
+              src={logoAsset}
               alt="MIPL"
               className="splash-logo h-24 w-24 object-contain md:h-28 md:w-28"
             />

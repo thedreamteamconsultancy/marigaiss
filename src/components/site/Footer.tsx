@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logoAsset from "@/assets/mipl-logo.png.asset.json";
+import logoAsset from "@/assets/logo.png";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -10,7 +10,7 @@ export function Footer() {
         <div className="col-span-2 md:col-span-1">
           <div className="flex items-center gap-3 text-white">
             <img
-              src={logoAsset.url}
+              src={logoAsset}
               alt="Marigaisss India Pvt. Ltd."
               className="h-12 w-auto object-contain md:h-14"
             />

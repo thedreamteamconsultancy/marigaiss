@@ -2,7 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowRight, Mail, Menu, Phone, X } from "lucide-react";
 import { whatsappQuoteUrl } from "@/lib/whatsapp";
-import logoAsset from "@/assets/mipl-logo.png.asset.json";
+import logoAsset from "@/assets/logo.png";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -52,7 +52,7 @@ export function Header() {
       <div className="container-x flex h-16 items-center justify-between py-2 md:h-20">
         <Link to="/" className={`flex items-center gap-3 transition-colors duration-500 ${onHero ? "text-white" : "text-[color:var(--color-foreground)]"}`}>
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="Marigaisss India Pvt. Ltd."
             className={`h-12 w-auto object-contain transition-transform duration-500 hover:scale-[1.03] md:h-16 ${onHero ? "drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)]" : "drop-shadow-[0_2px_8px_rgba(0,0,0,0.12)]"}`}
           />
