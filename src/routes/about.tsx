@@ -10,7 +10,7 @@ import galleryFerry from "@/assets/gallery-ferry.jpg";
 import capabilityEngineering from "@/assets/capability-engineering.jpg";
 import capabilityShipbuilding from "@/assets/capability-shipbuilding.jpg";
 import directorLenin from "@/assets/director-lenin.jpg";
-import directorSurya from "@/assets/director-surya.jpg";
+import directorSunil from "@/assets/director-surya.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Marigaiss India" },
       {
         property: "og:description",
-        content: "Our story, founder, corporate facts and values.",
+        content: "Our story, founders, leadership and values.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -32,17 +32,6 @@ export const Route = createFileRoute("/about")({
   }),
   component: AboutPage,
 });
-
-const FACTS: [string, string][] = [
-  ["CIN", "U74999AP2019PTC112057"],
-  ["Registration No.", "112057"],
-  ["Date of Incorporation", "31 May 2019"],
-  ["Authorized Capital", "₹1,00,00,000"],
-  ["Paid-up Capital", "₹1,00,00,000"],
-  ["Company Type", "Active · Non-Govt. Private"],
-  ["Directors", "Lenin Lankey · Surya Kala Lanke"],
-  ["Headquarters", "Kakinada, Andhra Pradesh"],
-];
 
 const TIMELINE = [
   { year: "2019", title: "Incorporation", body: "Marigaiss India Private Limited registered in Kakinada with a focused marine-engineering mandate.", image: capabilityShipbuilding },
@@ -108,9 +97,12 @@ function AboutPage() {
                 </div>
               </div>
               <p className="mt-5 text-sm leading-relaxed text-slate-600">
-                Marine engineer with strong experience across shipbuilding and marine operations.
-                Educated in Naval Architecture & Marine Engineering at the Institute of Marine
-                Engineers, India.
+                Marigaiss India Private Limited was founded in 2019 by Lenin Lankey, a highly
+                skilled mechanical and marine engineer with extensive expertise in the maritime
+                sector. Driven by a vision to deliver premier engineering solutions, he serves as
+                a Director — bringing rich technical acumen and years of practical marine
+                experience to the company, guiding its core business strategy and operational
+                goals.
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {["AutoCAD", "Marine Engineering", "Shipbuilding", "Requirements Analysis", "Leadership"].map((s) => (
@@ -122,32 +114,6 @@ function AboutPage() {
                   </span>
                 ))}
               </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* FACT PANEL */}
-      <section className="bg-[color:var(--color-mist-50)] py-20 md:py-24">
-        <div className="container-x">
-          <SectionHeading eyebrow="Corporate facts" title="At a glance." />
-          <Reveal>
-            <div className="mt-10 overflow-hidden rounded-2xl border border-[color:var(--color-steel-200)] bg-white">
-              <dl className="grid divide-y divide-[color:var(--color-steel-200)] md:grid-cols-2 md:divide-y-0">
-                {FACTS.map(([k, v], i) => (
-                  <div
-                    key={k}
-                    className={`flex items-center justify-between gap-6 px-6 py-5 md:px-8 ${
-                      i % 2 === 1 ? "md:border-l md:border-[color:var(--color-steel-200)]" : ""
-                    } ${i >= 2 && "md:border-t md:border-[color:var(--color-steel-200)]"}`}
-                  >
-                    <dt className="text-sm font-medium text-slate-500">{k}</dt>
-                    <dd className="text-right font-mono text-sm font-semibold text-[color:var(--color-navy-900)] md:text-base">
-                      {v}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
             </div>
           </Reveal>
         </div>
@@ -203,8 +169,8 @@ function AboutPage() {
           <SectionHeading eyebrow="Leadership" title="The directors behind Marigaiss." />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {[
-              { name: "Lenin Lankey", role: "Director · Founder", image: directorLenin, bio: "Qualified marine engineer leading Marigaiss India from Kakinada — founder, AutoCAD-fluent and hands-on across every project." },
-              { name: "Surya Kala Lanke", role: "Director", image: directorSurya, bio: "Director on the Marigaiss India board, supporting governance, operations and partnerships across the company." },
+              { name: "Lenin Lankey", role: "Founder & Director", image: directorLenin, bio: "A highly skilled mechanical and marine engineer with extensive expertise in the maritime sector. Driven by a vision to deliver premier engineering solutions, he brings rich technical acumen and years of practical marine experience — guiding the company's core business strategy and operational goals." },
+              { name: "Sunil Lanke", role: "Co-Founder & Director", image: directorSunil, bio: "A Mechanical and Marine Engineer who co-conceptualised the company alongside his brother, Lenin. Due to his active marine engagements abroad, he formally took up his position as Co-Founder and Director shortly after incorporation, bringing valuable international maritime experience to the leadership team." },
             ].map((d, i) => (
               <Reveal key={d.name} delay={i * 120}>
                 <div className="group flex h-full flex-col gap-5 overflow-hidden rounded-2xl border border-[color:var(--color-steel-200)] bg-white p-5 shadow-[var(--shadow-card)] sm:flex-row sm:p-6">

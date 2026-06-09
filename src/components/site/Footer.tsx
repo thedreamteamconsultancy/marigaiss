@@ -90,7 +90,6 @@ export function Footer() {
         <div className="container-x flex flex-col items-start justify-between gap-2 py-4 text-[11px] text-[color:var(--color-steel-300)] md:flex-row md:items-center md:py-6 md:text-xs">
           <p>© 2019–{year} Marigaiss India Private Limited. All rights reserved.</p>
           <div className="flex flex-col items-start gap-1 md:flex-row md:items-center md:gap-5">
-            <p className="font-mono">CIN: U74999AP2019PTC112057</p>
             <p>
               Designed &amp; Developed By{" "}
               <a
