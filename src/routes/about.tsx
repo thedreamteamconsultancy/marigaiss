@@ -9,8 +9,8 @@ import galleryPropeller from "@/assets/gallery-propeller.jpg";
 import galleryFerry from "@/assets/gallery-ferry.jpg";
 import capabilityEngineering from "@/assets/capability-engineering.jpg";
 import capabilityShipbuilding from "@/assets/capability-shipbuilding.jpg";
-import directorLenin from "@/assets/director-lenin.jpg";
-import directorSunil from "@/assets/director-surya.jpg";
+import directorLenin from "@/assets/owner2.jpeg";
+import directorSunil from "@/assets/owner1.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -276,11 +276,10 @@ function DynamicTimeline() {
                   <p className="mt-3 text-base leading-relaxed text-slate-600">{t.body}</p>
                 </div>
                 <span
-                  className={`absolute left-2 top-6 h-5 w-5 rounded-full border-4 border-white transition-colors duration-300 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 ${
-                    reached
+                  className={`absolute left-2 top-6 h-5 w-5 rounded-full border-4 border-white transition-colors duration-300 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 ${reached
                       ? "bg-[color:var(--color-cyan-400)] shadow-[0_0_0_6px_color-mix(in_oklab,var(--color-cyan-400)_25%,transparent)]"
                       : "bg-[color:var(--color-steel-200)]"
-                  }`}
+                    }`}
                 />
               </div>
             </Reveal>
